@@ -1,0 +1,6 @@
+server:
+  port: 9950
+
+eureka:
+  client:
+    enabled: false

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: movies-order-service
+  data:
+    redis:
+      port: ${REDIS_PORT:9951}
+      password: ${REDIS_USER_PASSWORD:pass}
+  mail:
+    host: "smtp.gmail.com"
+    port: 587
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8080/eureka"
+
+axon:
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson

@@ -38,7 +38,7 @@ public class Order {
 
     @CommandHandler
     private void handle(CompleteOrderCommand1 command) {
-        apply(new OrderCompletedEvent1(command.orderId()));
+        apply(new OrderCompletedEvent1(command.orderId(), command.finalPrice()));
     }
 
     @EventSourcingHandler
